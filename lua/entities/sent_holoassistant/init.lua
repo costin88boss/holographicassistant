@@ -9,16 +9,16 @@ function ENT:SpawnFunction(ply, tr)
     ent:SetOwner(ply)
     ent:SetPos(tr.HitPos + tr.HitNormal)
 
-    ent:SetNoDraw(true) // we're using a clientside model instead + it removes a shadow.
+    ent:SetNoDraw(true) -- we're using a clientside model instead + it removes a shadow.
 
 	ent:Spawn()
 	ent:Activate()
 
-	table.insert(holoAssistants, ent)
+	ply.chaHoloAssistant = ent
 
 	return ent
 end
 
 function ENT:OnRemove()
-	table.RemoveByValue(holoAssistants, self)
+	ply.chaHoloAssistant = nil
 end
