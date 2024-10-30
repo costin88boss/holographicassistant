@@ -1,5 +1,3 @@
-AddCSLuaFile()
-
 include("shared.lua")
 
 -- List used for PostDrawTranslucentRenderables hook.

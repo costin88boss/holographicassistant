@@ -1,6 +1,5 @@
-AddCSLuaFile("entities/sent_holoassistant/cl_init.lua")
-AddCSLuaFile("entities/sent_holoassistant/shared.lua")
-
+AddCSLuaFile("cl_init.lua")
+AddCSLuaFile("shared.lua")
 include("shared.lua")
 
 function ENT:SpawnFunction(ply, tr)
